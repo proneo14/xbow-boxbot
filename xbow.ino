@@ -104,7 +104,7 @@ void loop() {
     Serial.println("Servo firing (spin)...");
   }
 
-  if (servoActive && millis() - servoStartTime > 775) {
+  if (servoActive && millis() - servoStartTime > 50) {
     myServo.write(90);  // stop
     servoActive = false;
     Serial.println("Servo stopped");
